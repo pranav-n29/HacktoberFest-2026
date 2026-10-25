@@ -1,0 +1,16 @@
+
+{
+  "name": "checkmytoc-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CheckMyTOC API and risk scoring engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:risk": "node test-risk-score.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "@google/genai": "^1.0.0"
+  }
+}
