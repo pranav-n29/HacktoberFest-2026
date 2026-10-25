@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CheckMyTOC — ClauseWise</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-mark">C<span>W</span></div>
+      <div class="brand-copy"><h1>ClauseWise</h1><p>Understand before you agree.</p></div>
+      <span class="live-pill"><i></i> AI REVIEW</span>
+    </header>
+    <main>
+      <div class="site-row"><span class="site-dot"></span><span id="siteName">Ready to review</span><span class="site-label" id="siteStatus">LOCAL ANALYSIS</span></div>
+      <section class="score-panel">
+        <div class="score-ring" id="scoreRing"><svg viewBox="0 0 116 116" aria-hidden="true"><circle class="ring-track" cx="58" cy="58" r="48"></circle><circle class="ring-value" id="ringValue" cx="58" cy="58" r="48"></circle></svg><div class="score-center"><strong id="score">—</strong><small>/ 100</small></div></div>
+        <div class="score-copy"><div class="eyebrow">POTENTIAL RISK</div><h2 id="riskLevel">Awaiting analysis</h2><p id="summaryMini">Read a page or paste terms to see potential risks.</p><div class="score-meta"><span id="findingCount">0 clauses flagged</span><span>·</span><span>AI-assisted</span></div></div>
+      </section>
+      <section class="input-panel">
+        <label for="terms">TERMS &amp; CONDITIONS</label>
+        <textarea id="terms" placeholder="Read the current page or paste the Terms and Conditions here…"></textarea>
+        <div class="button-row"><button id="extract" class="btn btn-light" type="button">↧ Read current page</button><button id="analyze" class="btn btn-primary" type="button">Analyze terms <span>↗</span></button></div>
+        <p id="status" class="status" role="status">Your text is sent to your local backend for analysis.</p>
+      </section>
+      <div class="section-head"><div><span class="eyebrow">YOUR REVIEW</span><h2>Findings <span class="count" id="countBadge">0</span></h2></div><button id="notesTab" class="notes-toggle" type="button">Quick notes</button></div>
+      <div id="results" class="results"><div class="empty-state"><div class="empty-icon">✳</div><strong>No findings yet</strong><p>Analyze a page to see evidence-backed clauses, impact and next steps.</p></div></div>
+      <section id="notes" class="notes" hidden><div class="note-card"><span>BEFORE YOU AGREE</span><p>Check renewal dates, cancellation rules, data-sharing terms, liability limits and dispute procedures.</p></div><div class="note-card note-lime"><span>PRIVACY FIRST</span><p>Only analyze text you are comfortable sending to your configured backend.</p></div></section>
+      <section id="checklistSection" class="checklist-section" hidden><div class="section-head"><div><span class="eyebrow">NEXT STEPS</span><h2>Before you agree</h2></div></div><div id="checklist"></div></section>
+    </main>
+    <footer><span>ClauseWise · CheckMyTOC</span><span>Informational screening only · Not legal advice</span></footer>
+    <div id="detailLayer" class="detail-layer" hidden><div class="detail-top"><button id="backButton" class="back-button" type="button">←</button><span>Back to findings</span><span id="detailSeverity" class="severity"></span></div><div id="detailBody" class="detail-body"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -51,18 +51,18 @@ Do not invent clauses. If information is missing, say so in the summary.
 Keep findings concise and return at most 8 findings.
 
 TERMS BEGIN
-${text}
-TERMS END
+${text.slice(0, 12000)}TERMS END
 `;
 
-  const response = await ai.models.generateContent({
-    model: MODEL,
-    contents: prompt,
-    config: {
-      temperature: 0.1,
-      maxOutputTokens: 3000,
-    },
-  });
+ 
+const response = await ai.models.generateContent({
+  model: MODEL,
+  contents: prompt,
+  config: {
+    maxOutputTokens: 4096,
+  },
+});
+
 
   const raw = response.text || "";
   const cleaned = raw

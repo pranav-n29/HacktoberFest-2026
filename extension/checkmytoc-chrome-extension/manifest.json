@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "CheckMyTOC — ClauseWise",
+  "version": "1.0.0",
+  "description": "Understand Terms and Conditions with evidence-backed AI risk analysis.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "action": {
+    "default_title": "CheckMyTOC",
+    "default_popup": "popup.html"
+  }
+}

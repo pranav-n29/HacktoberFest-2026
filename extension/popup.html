@@ -1,0 +1,47 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CheckMyTOC</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">CT</div>
+      <div>
+        <h1>CheckMyTOC</h1>
+        <p>Understand before you agree.</p>
+      </div>
+    </header>
+
+    <label for="terms">Terms and Conditions</label>
+
+    <textarea
+      id="terms"
+      placeholder="Paste the terms here, or extract text from the current page."
+    ></textarea>
+
+    <div class="actions">
+      <button id="extract" class="secondary" type="button">
+        Read current page
+      </button>
+      <button id="analyze" type="button">
+        Analyze terms
+      </button>
+    </div>
+
+    <p id="status" role="status">
+      Your terms are analyzed by the local backend.
+    </p>
+
+    <section id="results" hidden></section>
+
+    <footer>AI-assisted screening only — not legal advice.</footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
